@@ -76,7 +76,7 @@ image::https://github.com/Julie789/Datacom_labs/blob/master/running_instance.JPG
   vi index.html
 ```
   
-  *  Add your html contents in this file.
+  *  Add your html contents in this file. Add and edit the html file to see the changes.
   
 ```
 <html>
@@ -85,7 +85,6 @@ image::https://github.com/Julie789/Datacom_labs/blob/master/running_instance.JPG
 </head>
 <body>
 <h1>Welcome to my website</h1>
-<img src="image.jpg" />
 </body>
 </html>
 ```
