@@ -4,7 +4,8 @@ v1.0, 2019-09-25
 ifndef::bound[:imagesdir: figs]
 :icons: font
 
-This exercise will help in setting up AWS instance and creating a static web server. 
+This exercise will help in setting up AWS instance and creating a static website using AWS and apache server.
+Static websites deliver HTML, Javascript, images, video, and other files to your website visitors and contain no application code.
 
 == Learning Objectives
 
@@ -14,33 +15,74 @@ By the end of this lesson, you will be able to:
 * Explore different options available in AWS.
 * Create your own static website.
 
-== Steps
-  * Launch an AWS Liux instance.
-    * Choose an AMI Amazon Linux 2 AMI (HVM), SSD Volume Type
-    * Choose an Instance Type which is free t2.micro
-    * Keep default of the Configure Instance Details and Add Storage
-    * In Add Tags, add key value pair as Name: MyFirstWebsite
-    * Add the security group of SSH, HTTP, HTTPS
-    * Review and Launch the instance. 
-    * Download the PEM file and secure it in your system.
+== Introduction to AWS
+
+Amazon Web Services offers reliable, scalable and inexpensive cloud computing services to individuals, companies and governments on a metered pay-as-you-go basis.
+
+== Prerequisites
+
+ * Create an account in AWS.
+ * Sign in to the AWS console.
+ 
+== Steps involved to create a static website
+ 
+  * Launch an AWS Linux instance.
+    * Go to AWS Management console and then launch a virtual machine with EC2.
+    * Choose an Amazon Machine Image (AMI). An AMI is a template that contains the software configuration (operating system, application server, and applications) required to launch your instance. Select one option from Amazon Linux.
+    * Choose an Instance Type which is free tier eligible i.e. t2.micro. Amazon EC2 provides a wide selection of instance types optimized to fit different use cases. Instances are virtual servers that can run applications. Click Next.
+    * Keep default of the _Configure Instance Details_ and _Add Storage_. Click Next for _Add Tags_.
+    * In Add Tags, add key value pair as Name: MyFirstWebsite. Click Next for _Configure Security Group_
+    * A security group is a set of firewall rules that control the traffic for your instance. On this page, you can add rules to allow   specific traffic to reach your instance. For example, if you want to set up a web server and allow Internet traffic to reach your   instance, add rules that allow unrestricted access to the HTTP and HTTPS ports. You can create a new security group or select from an existing one below. Add the security group of SSH, HTTP, HTTPS as shown below:
+    * Click _Review and Launch_ the instance. After verifying, Click on _Launch_
+    * Download the PEM file i.e Key Pair as shown below and secure it in your system.
     
-  * Once Instance is launched, you can see the instance running in your EC2 Instances.
+  * Once Instance is launched, you can see the instance running in your EC2 Instances as shown below.
   
-  * Connect to your server using command: ssh -i "your pem file" ec2-user@"your IPv4 Public IP"
-    Keep your pem file and the IP address handy. Type yes to authenticate your connection. You will be able to connect to the Amazon EC2.
+  * Open cmd and connect to your server using command shown below. Keep your pem file and the IP address handy. Type yes to authenticate your connection. You will be able to connect to the Amazon EC2.
+```
+  ssh -i "your pem file" ec2-user@"your IPv4 Public IP"
+```
   
-  * sudo su -
+  * Switch to the root user by invoking command 
+```
+  sudo su -
+```
   
-  * cd /var/ . Create the folder www/html.
+  * Go to /var and create folder www/html if not existing.
   
-  * Go to html folder. cd /var/www/html
+  * Create index.html file using vi editor.
+```
+  vi index.html
+```
   
-  * vi index.html. Add your html contents in this file.
+  *  Add your html contents in this file.
   
-  * Install Apache web server. yum install httpd.
+```
+<html>
+<head>
+<title>My Website</title>
+</head>
+<body>
+<h1>Welcome to my website</h1>
+<img src="image.jpg" />
+</body>
+</html>
+```
+
+  * Install Apache web server through command.  
+```
+  yum install httpd
+```
   
-  * service httpd start
+  * Start the server.
+```
+  service httpd start
+```
   
-  * service httpd status
+  * Check the status. It should be in running stage.
+```
+  service httpd status
+```
   
+  * Once the server is running, run in the browser the Public DNS or IPv4 from your instance. The website is ready to use.
   
