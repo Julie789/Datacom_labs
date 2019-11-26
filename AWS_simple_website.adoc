@@ -1,0 +1,46 @@
+= Creating Static Website using Amazon Web Services
+Julie Sunny Mathew <jsunnymathew@unomaha.edu>
+v1.0, 2019-09-25
+ifndef::bound[:imagesdir: figs]
+:icons: font
+
+This exercise will help in setting up AWS instance and creating a static web server. 
+
+== Learning Objectives
+
+By the end of this lesson, you will be able to:
+
+* Set up the AWS Linux instance.
+* Explore different options available in AWS.
+* Create your own static website.
+
+== Steps
+  * Launch an AWS Liux instance.
+    * Choose an AMI Amazon Linux 2 AMI (HVM), SSD Volume Type
+    * Choose an Instance Type which is free t2.micro
+    * Keep default of the Configure Instance Details and Add Storage
+    * In Add Tags, add key value pair as Name: MyFirstWebsite
+    * Add the security group of SSH, HTTP, HTTPS
+    * Review and Launch the instance. 
+    * Download the PEM file and secure it in your system.
+    
+  * Once Instance is launched, you can see the instance running in your EC2 Instances.
+  
+  * Connect to your server using command: ssh -i "your pem file" ec2-user@"your IPv4 Public IP"
+    Keep your pem file and the IP address handy. Type yes to authenticate your connection. You will be able to connect to the Amazon EC2.
+  
+  * sudo su -
+  
+  * cd /var/ . Create the folder www/html.
+  
+  * Go to html folder. cd /var/www/html
+  
+  * vi index.html. Add your html contents in this file.
+  
+  * Install Apache web server. yum install httpd.
+  
+  * service httpd start
+  
+  * service httpd status
+  
+  
