@@ -1,0 +1,65 @@
+= AWS Lambda Tutorial
+Julie Sunny Mathew <jsunnymathew@unomaha.edu>
+v1.0, 2019-09-25
+
+This exercise will help to learn about AWS lambda and how to use AWS lambda Function. This tutorial will design the AWS Step
+functions and run a serverless workflow that coordinates multiple AWS Lambda functions.
+
+== Learning Objectives
+
+By the end of this lesson, you will be able to:
+
+* Understand AWS Lambda.
+* Learn about AWS Step Functions.
+* Create multiple AWS Lambda functions.
+* Create a serverless application to automate handling of the support tickets in a call center.
+
+== What is AWS Lambda
+
+AWS Lambda is a compute service that lets you run code without provisioning or managing servers. It executes your code only when 
+needed and scales automatically, from a few requests per day to thousands per second. You pay only for the compute time you consume. It 
+is an ideal compute platform for many application scenarios, provided that you can write your application code in languages supported 
+by AWS Lambda, and run within the AWS Lambda standard runtime environment and resources provided by Lambda.
+
+== What is AWS Step Functions
+
+AWS Step Functions lets you coordinate multiple AWS services into serverless workflows so you can build and update apps quickly. 
+Using Step Functions, you can design and run workflows that stitch together services, such as AWS Lambda, AWS Fargate, and 
+Amazon SageMaker, into feature-rich applications.
+
+In this tutorial you will use AWS Step Functions and AWS Lambda, bot the services are within the AWS free tier.
+
+== Prerequisites
+
+ * Create an account in AWS.
+ * Sign in to the AWS console.
+ 
+== Steps involved to create a serverless workflow with AWS Step Functions and AWS Lambda
+ 
+  * Complete the AWS tutorial on _Create a Serverless Workflow with AWS Step Functions and AWS Lambda_ 
+  in *_https://aws.amazon.com/getting-started/tutorials/create-a-serverless-workflow-step-functions-lambda/_*
+  
+      * The steps involved in the tutorial are: 
+        1. Create a State Machine & Serverless Workflow.
+        2. Create an AWS Identity and Access Management (IAM) Role.
+        3. Add the IAM Role to the State Machine.
+        4. Create your AWS Lambda Functions.
+        5. Populate your Workflow.
+        6. Execute your Workflow.
+        7. Terminate your Resources.
+      
+      * The workflow coordinated all of your functions according to the logic defined and passed data from one state to another.
+ 
+ 
+== Thought Questions
+
+=== Basics
+
+1. What is a serverless application?
+2. When to use AWS Lambda functions?
+3. Which all languages supported by AWS Lambda? 
+
+=== Do some research
+
+1. How does AWS Lambda secure your code? 
+2. What is the advantages and disadvantages of using AWS Lambda?
