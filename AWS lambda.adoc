@@ -27,7 +27,7 @@ AWS Step Functions lets you coordinate multiple AWS services into serverless wor
 Using Step Functions, you can design and run workflows that stitch together services, such as AWS Lambda, AWS Fargate, and 
 Amazon SageMaker, into feature-rich applications.
 
-In this tutorial you will use AWS Step Functions and AWS Lambda, bot the services are within the AWS free tier.
+In this tutorial you will use AWS Step Functions and AWS Lambda, both the services are within the AWS free tier.
 
 == Prerequisites
 
