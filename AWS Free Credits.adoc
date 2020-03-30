@@ -1,0 +1,15 @@
+= Amazon AWS Education Credits Steps
+Julie Sunny Mathew <jsunnymathew@unomaha.edu>
+v1.0, 2020-03-30
+
+Amazon AWS offers credits to students at member institutions in the amount of $100 per year.
+
+== Steps involved to receive a free educational credits
+ 
+  * Complete the AWS Educate tutorial on _Student Signup Guide_ 
+  in *_https://github.com/Julie789/Datacom_labs/blob/master/AWS%20Educate%20Student%20Onboarding.pdf_*
+  
+      * The steps involved in the tutorial are: 
+        1. Complete the registration to the AWS Educate as a Student.
+        2. Redeem your credit code and apply it to your AWS account.
+ 
